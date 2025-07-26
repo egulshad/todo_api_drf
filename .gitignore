@@ -1,0 +1,12 @@
+# created by virtualenv automatically
+# Ignore Mac system files
+.DS_Store
+
+# Ignore Python cache
+__pycache__/
+
+# Ignore virtual environments
+django_env/
+
+# Ignore VSCode settings
+.vscode/
