@@ -1,0 +1,30 @@
+{% extends "todo_app/base.html" %}
+
+{% block title %}
+    Create Page
+{% endblock title %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1 class="display-4 fw-bold">TO-DO LIST</h1>
+        <p class="lead">This is To-Do List for Python Django Web Development</p>
+        <div>
+            <form method="POST">
+              {% csrf_token %}
+                <div class="row mb-3">
+                  <label for="todoTitle" class="col-sm-2 col-form-label">To-Do Title</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="todoTitle" name="title">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="todoDesc" class="col-sm-2 col-form-label">Description</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="todoDesc" name="description">
+                  </div>
+                </div>               
+                <button type="submit" class="btn btn-success">Update This To-Do</button>
+              </form>
+        </div>
+      </div>
+{% endblock content %}
